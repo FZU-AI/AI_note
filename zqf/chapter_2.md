@@ -1,4 +1,3 @@
-
 ## 数据操作
 **使用MXNet中的NDArray类**
 
@@ -23,32 +22,32 @@ nd.random.normal(0, 1, shape=(3, 4))
 **运算**
 
 ```python
-x+y //两个NDArray中的相应元素相加，注意x与y形状要一致。
-//如果不一致，两个矩阵会被复制成一样的然后进行加法。
-x*y //乘，同上
-x/y //除，同上
-X == Y //判断相应位置的数是否相等，相等为1，不同为0
-y.exp() //按元素做指数运算
+x+y #两个NDArray中的相应元素相加，注意x与y形状要一致。
+#如果不一致，两个矩阵会被复制成一样的然后进行加法。
+x*y #乘，同上
+x/y #除，同上
+X == Y #判断相应位置的数是否相等，相等为1，不同为0
+y.exp() #按元素做指数运算
 
 In [18]: X.norm().asscalar()
 Out[18]: 22.494442  //不是矩阵了
-//通过asscalar函数将结果变换为Python中的标量
+#通过asscalar函数将结果变换为Python中的标量
 
 X.sum() 
-//对NDArray中的所有元素求和得到只有⼀个元素的NDArray
+#对NDArray中的所有元素求和得到只有⼀个元素的NDArray
 
 nd.dot(X, Y.T)  //Y.T是Y矩阵的转置矩阵
-//⽤dot函数做矩阵乘法。将X与Y的转置做矩阵乘法
+#⽤dot函数做矩阵乘法。将X与Y的转置做矩阵乘法
 
 nd.concat(X, Y, dim=0) 
-//把X Y矩阵拼在一起，dim=0竖着拼，dim=1横着拼。默认dim=1
+#把X Y矩阵拼在一起，dim=0竖着拼，dim=1横着拼。默认dim=1
 ```
 **索引**
 
 ```python
-X[1:3]  //指定了NDArray的⾏索引截取范围[1:3]，左闭右开
-X[1, 2] = 9 //该第1行第2列 元素重新赋值。下标从0开始
-X[1:2, :] = 12 //为⾏索引为1的每⼀列元素重新赋值
+X[1:3]  #指定了NDArray的⾏索引截取范围[1:3]，左闭右开
+X[1, 2] = 9 #该第1行第2列 元素重新赋值。下标从0开始
+X[1:2, :] = 12 #为⾏索引为1的每⼀列元素重新赋值
 ```
 **NDArray和NumPy相互变换**
 
@@ -60,8 +59,8 @@ NumPy实例变换成NDArray实例
 
 ```python
 In : 
-P = np.ones((2, 3))  //创建nunmpy实例
-D = nd.array(P)		//将numpy实例转换为NDArray
+P = np.ones((2, 3))  #创建nunmpy实例
+D = nd.array(P)		#将numpy实例转换为NDArray
 D
 Out:
 [[1. 1. 1.]
@@ -71,7 +70,8 @@ Out:
 将NDArray实例变换成NumPy实例
 
 ```python
-In : D.asnumpy() //将NDArray实例转换为numpy
+In : D.asnumpy() #将NDArray实例转换为numpy
 Out: array([[1., 1., 1.],
 [1., 1., 1.]], dtype=float32)
 ```
+
