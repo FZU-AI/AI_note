@@ -3,22 +3,22 @@
 **使用MXNet中的NDArray类**
 
 ```python
-from mxnet import nd //引入
+from mxnet import nd #引入
 ```
 **一些基本创建NDArray操作**
 ```python
-x=nd.arange(12) //创建一个行向量，从0开始12个整数
-x.shape  //通过shape属性 得到元素总数
-x.size  //使⽤reshape函数把⾏向量x的形状改为(3, 4) 3⾏4列的矩阵
-x.reshape((3, 4)) //改变x形状
-nd.zeros((2, 3, 4)) //生成两个3x4的矩阵里面元素都是0
-nd.ones((3, 4)) //生成一个3x4的矩阵里面元素都是1
+x=nd.arange(12) #创建一个行向量，从0开始12个整数
+x.shape  #通过shape属性 得到元素总数
+x.size  #使⽤reshape函数把⾏向量x的形状改为(3, 4) 3⾏4列的矩阵
+x.reshape((3, 4)) #改变x形状
+nd.zeros((2, 3, 4)) #生成两个3x4的矩阵里面元素都是0
+nd.ones((3, 4)) #生成一个3x4的矩阵里面元素都是1
 
 Y = nd.array([[2, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]]) 
-//通过Python的列表（list）指定需要创建的NDArray中每个元素的值
+#通过Python的列表（list）指定需要创建的NDArray中每个元素的值
 
 nd.random.normal(0, 1, shape=(3, 4)) 
-//创建⼀个形状为(3,4)的NDArray。它的每个元素都随机采样于均值为0、标准差为1的正态分布
+#创建⼀个形状为(3,4)的NDArray。它的每个元素都随机采样于均值为0、标准差为1的正态分布
 ```
 **运算**
 
