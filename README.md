@@ -2,10 +2,9 @@
 
 A repository about learning AI.
 
-## 一、gitbook网址：https://fzu-ai.gitbook.io/ai/
+## 一、gitbook网址：[https://fzu-ai.gitbook.io/ai/](https://fzu-ai.gitbook.io/ai/)
 
 ## 二、文件结构规则（为适应gitbook的显示）：
-
 
 1.子目录中不要放README.md文件。
 
