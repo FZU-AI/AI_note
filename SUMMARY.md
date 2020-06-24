@@ -1,7 +1,7 @@
 # Table of contents
 
 * [FZU\_AI](README.md)
-* [README](goal.md)
+* [sonata](goal.md)
 * [lh](lh/README.md)
   * [第三章](lh/di-san-zhang-xue-xi-bi-ji-wan-jie.md)
   * [1-2章学习笔记](lh/12-zhang-xue-xi-bi-ji.md)
@@ -29,7 +29,7 @@
 * [xia](xia/README.md)
   * [深度学习](xia/shen-du-xue-xi/README.md)
     * [一二章](xia/shen-du-xue-xi/yi-er-zhang.md)
-* [README](hjw/README.md)
+* [hjw](hjw/README.md)
   * [Git基本知识的学习笔记](hjw/git-ji-ben-zhi-shi-de-xue-xi-bi-ji.md)
   * [deep\_learning](hjw/deep_learning/README.md)
     * [README](hjw/deep_learning/chapter02.md)
