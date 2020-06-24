@@ -1,2 +1,4 @@
-# FZU_AI
+# FZU\_AI
+
 A repository about learning AI.
+
