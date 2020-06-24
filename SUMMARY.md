@@ -1,6 +1,6 @@
 # Table of contents
 
-* [README-FZU\_AI](README.md)
+* [README](README.md)
 * [sonata](sonata/README.md)
   * [《数字图像处理》](sonata/shu-zi-tu-xiang-chu-li/README.md)
     * [第二章 《数字图像基础》](sonata/shu-zi-tu-xiang-chu-li/di-er-zhang-shu-zi-tu-xiang-ji-chu.md)
