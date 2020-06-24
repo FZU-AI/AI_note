@@ -1,7 +1,6 @@
 # Table of contents
 
-* [FZU\_AI](README.md)
-* [sonata](goal.md)
+* [README-FZU\_AI](README.md)
 * [lh](lh/README.md)
   * [第三章](lh/di-san-zhang-xue-xi-bi-ji-wan-jie.md)
   * [1-2章学习笔记](lh/12-zhang-xue-xi-bi-ji.md)
@@ -33,4 +32,5 @@
   * [Git基本知识的学习笔记](hjw/git-ji-ben-zhi-shi-de-xue-xi-bi-ji.md)
   * [deep\_learning](hjw/deep_learning/README.md)
     * [README](hjw/deep_learning/chapter02.md)
+* [sonata‘s goal](goal.md)
 
