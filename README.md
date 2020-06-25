@@ -6,13 +6,9 @@ A repository about learning AI.
 
 ## 二、文件结构规则（为适应gitbook的显示）：
 
-1.子目录中不要放README.md文件。
-
-2.笔记统一使用md（markdowm）格式。
-
-3.文件名尽量以英文命名，由于与gitbook关联，导致文件结构异常，请自行整理自己的文件夹。
-
-4.发现自己笔记显示有问题的同学可以私聊xz，或者尝试自己在gitbook中绑定仓库而后调整。
+1. 笔记统一使用md（markdowm）格式。
+2. 文件名字格式不限，修改首页的SUMMARY.md来定义自己的gitbook文件目录。所以文件名字格式可以不限。
+3. 发布新笔记的同学，修改SUMMARY重定位自己的文件。
 
 ## 三、习题答案汇总——wiki
 
