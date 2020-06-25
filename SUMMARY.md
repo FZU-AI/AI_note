@@ -30,6 +30,7 @@
   * [deep\_learning](xz/deep_learning/README.md)
     * [《第一章》《第二章》](xz/deep_learning/di-yi-zhang-di-er-zhang.md)
     * [《第三章》](xz/deep_learning/di-san-zhang.md)
+    * [《第四章》](xz/deep_learning/《第四章》.md)
 * [dhz](dhz/README.md)
   * [code](dhz/code/README.md)
     * [ReadMe](dhz/code/code.md)
