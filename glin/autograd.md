@@ -12,7 +12,8 @@ with ag.record():
 z.backward()
 print("x.grad:",x.grad)
 
-"""    ① 首先定义待求导的变量。如上代码,通过NDArray模块,定义了一个2X2的向量矩阵x;
+"""    
+       ① 首先定义待求导的变量。如上代码,通过NDArray模块,定义了一个2X2的向量矩阵x;
 
        ②为变量求导申请空间。如上,调用NDArray矩阵对象x的attach_grad()方法后,会为x申请一份用于存放求导结果的空间Buffer。对象x附带着导数空间Buffer,当对x求导成功后,便将求导结果存储在x的空间Buffer中;
     
