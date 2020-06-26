@@ -42,7 +42,7 @@
   * [深度学习](xia/shen-du-xue-xi/README.md)
     * [一二章](xia/shen-du-xue-xi/yi-er-zhang.md)
 * [hjw](hjw/README.md)
-  * [Git基本知识的学习笔记](hjw/git-ji-ben-zhi-shi-de-xue-xi-bi-ji.md)
+  * [Git基本知识的学习笔记](hjw/Git基本知识的学习笔记.md)
   * [deep\_learning](hjw/deep_learning/README.md)
     * [README](hjw/deep_learning/chapter02.md)
 
