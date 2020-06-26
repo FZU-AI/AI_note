@@ -1,10 +1,13 @@
-## 数据操作
+# 数据操作
+
 **使用MXNet中的NDArray类**
 
 ```python
 from mxnet import nd #引入
 ```
+
 **一些基本创建NDArray操作**
+
 ```python
 x=nd.arange(12) #创建一个行向量，从0开始12个整数
 x.shape  #通过shape属性 得到元素总数
@@ -19,6 +22,7 @@ Y = nd.array([[2, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])
 nd.random.normal(0, 1, shape=(3, 4)) 
 #创建⼀个形状为(3,4)的NDArray。它的每个元素都随机采样于均值为0、标准差为1的正态分布
 ```
+
 **运算**
 
 ```python
@@ -42,6 +46,7 @@ nd.dot(X, Y.T)  //Y.T是Y矩阵的转置矩阵
 nd.concat(X, Y, dim=0) 
 #把X Y矩阵拼在一起，dim=0竖着拼，dim=1横着拼。默认dim=1
 ```
+
 **索引**
 
 ```python
@@ -49,24 +54,28 @@ X[1:3]  #指定了NDArray的⾏索引截取范围[1:3]，左闭右开
 X[1, 2] = 9 #该第1行第2列 元素重新赋值。下标从0开始
 X[1:2, :] = 12 #为⾏索引为1的每⼀列元素重新赋值
 ```
+
 **NDArray和NumPy相互变换**
 
 首先，引入包
+
 ```python
 import numpy as np
 ```
+
 NumPy实例变换成NDArray实例
 
 ```python
 In : 
 P = np.ones((2, 3))  #创建nunmpy实例
-D = nd.array(P)		#将numpy实例转换为NDArray
+D = nd.array(P)        #将numpy实例转换为NDArray
 D
 Out:
 [[1. 1. 1.]
 [1. 1. 1.]]
 <NDArray 2x3 @cpu(0)>
 ```
+
 将NDArray实例变换成NumPy实例
 
 ```python
