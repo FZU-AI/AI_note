@@ -24,7 +24,7 @@
     * [深度学习简介](ch/dong-shou-xue-bi-ji/shen-du-xue-xi-jian-jie.md)
     * [深度学习基础](ch/dong-shou-xue-bi-ji/shen-du-xue-xi-ji-chu.md)
   * [flask基础](ch/flask基础/README.md)
-    * [basic_flask use](ch/flask基础/basic_flask use.md)
+    * [basic_flask use](ch/flask基础/basic_flask%20use.md)
 * [AI-369](ai-369/README.md)
   * [第二章：预备知识](ai-369/di-er-zhang-yu-bei-zhi-shi.md)
   * [第一章：深度学习简介](ai-369/di-yi-zhang-shen-du-xue-xi-jian-jie.md)
