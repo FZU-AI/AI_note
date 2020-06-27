@@ -12,14 +12,18 @@ A repository about learning AI.
 
 3. 发布新笔记的同学，修改SUMMARY重定位自己的文件。
 
-4. 如果发现笔记本中的照片没有显示出来的同学，可以有两种方法①配置自己的图床②手动修改路径为相对路径，并将照片一起上传到github仓库中。
-   图床配置教程：
-   https://blog.csdn.net/mdjxy63/article/details/105908079
-   https://blog.csdn.net/Ay_yzx/article/details/106865695
+4. 如果发现笔记本中的照片没有显示出来的同学，以下方法任选一个
    
-   相对路径设置：
+   1. 配置自己的图床，配置教程：
    
-   https://blog.csdn.net/tian_ci/article/details/82909919?utm_source=blogxgwz0
+      https://blog.csdn.net/mdjxy63/article/details/105908079
+      https://blog.csdn.net/Ay_yzx/article/details/106865695
+   
+   2. 手动修改路径为相对路径，并将照片一起上传到github仓库中。（此方法gitbook不显示图片）。typora的相对路径设置：
+   
+      https://blog.csdn.net/tian_ci/article/details/82909919?utm_source=blogxgwz0
+   
+   3. 将github作为图床，上传照片至github仓库后，使用如下格式的链接：https://raw.githubusercontent.com/FZU-AI/AI_note/master/xz/deep_learning/charter5/image-20200628002402855.png，而后以此链接插入为markdown的图像地址。
 
 ## 三、习题答案汇总——wiki
 
