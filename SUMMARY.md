@@ -33,6 +33,7 @@
     * [《第一章》《第二章》](xz/deep_learning/《第一二章》.md)
     * [《第三章》](xz/deep_learning/《第三章》.md)
     * [《第四章》](xz/deep_learning/《第四章》.md)
+    * [《第五章》](xz/deep_learning/《第五章》.md)
 * [dhz](dhz/README.md)
   * [code](dhz/code/README.md)
     * [ReadMe](dhz/code/code.md)
