@@ -26,4 +26,103 @@
 ## 1.2线性回归的表示方法
 ### 神经网络图
 线性回归是一个单层神经网络图
+神经网络图中，输入个数又称**特征数**或**特征向量维度**
+### 矢量计算表达式
+```python
+#定义两个1000维的向量
+from mxnet import nd 
+from time import time
+a = nd.ones(shape=1000) 
+b = nd.ones(shape=1000) 
+```
+```python
+#直接将向量做矢量相加
+d = a + b 
+```
+矢量相加比按元素逐个标量相加的速度更快。
+## 线性回归的从零开始实现
+首先只利⽤NDArray和autograd来实现⼀个线性回归的训练
+```python
+%matplotlib inline//作图模块
+from IPython import display
+from matplotlib import pyplot as plt
+from mxnet import autograd, nd
+import random
+```
+### 2.1生成数据集
+首先构造一个简单的数据集，定训练集样本数为1000，特征数为2，随机给出样本特征；使用给定的权重w = [2,−3.4]⊤和偏差b = 4.2，随机一个噪声ϵ来⽣成标签  
+                                  y = Xw + b + ϵ,    
+噪声项服从均值为0，标准差为0.01的正态分布
+```python
+num_inputs = 2//特征数为2
+num_examples = 1000//训练集样本个数为1000
+true_w = [2, -3.4]//给定的权重
+true_b = 4.2//给定的偏差
+features = nd.random.normal(scale=1, shape=(num_examples, num_inputs))//随机生成样本特征
+labels = true_w[0] * features[:, 0] + true_w[1] * features[:, 1] + true_b//模型公式
+labels += nd.random.normal(scale=0.01, shape=labels.shape)//给公式加上噪声
+```
+### 2.2读取数据
+在训练模型时，需要遍历数据集并不断读取小批量数据样本。  
+定义一个函数，每次返回批量大小个随机样本的标签和特征。
+```python
+def data_iter(batch_size, features, labels):
+    num_examples = len(features)
+    indices = list(range(num_examples))
+    random.shuffle(indices)  # 样本的读取顺序是随机的
+    for i in range(0, num_examples, batch_size):
+        j = nd.array(indices[i: min(i + batch_size, num_examples)])
+        yield features.take(j), labels.take(j)  # take函数根据索引返回对应元素
+```
+### 2.3初始化模型参数
+我们将权重初始化成均值为0、标准差为0.01的正态随机数，偏差则初始化成0。
+```python
+w = nd.random.normal(scale=0.01, shape=(num_inputs, 1))
+b = nd.zeros(shape=(1,))
+```
+并且分别创建其梯度
+```python
+w.attach_grad()
+b.attach_grad()
+```
+### 2.4定义模型
+按照公式定义模型
+```python
+def linreg(X, w, b): 
+    return nd.dot(X, w) + b
+```
+### 2.5定义损失函数
+使用平方损失定义损失函数
+```python
+def squared_loss(y_hat, y): 
+    return (y_hat - y.reshape(y_hat.shape)) ** 2 / 2
+```
+### 2.6定义优化算法
+使用sgd函数实现小批量随机梯度下降算法
+```python
+def sgd(params, lr, batch_size): 
+    for param in params:
+        param[:] = param - lr * param.grad / batch_size
+```
+### 2.7训练模型
+在训练中，使用多次迭代模型参数；每次迭代中，根据当前读取的特征和标签，调用反向函数backward计算小批量随机梯度，并调用优化函数sgd迭代模型参数。
+```python
+lr = 0.03//学习率，超参数
+num_epochs = 3//迭代周期个数，超参数
+net = linreg
+loss = squared_loss
 
+for epoch in range(num_epochs):  //训练模型一共需要num_epochs个迭代周期
+    // 在每一个迭代周期中，会使用训练数据集中所有样本一次（假设样本数能够被批量大小整除）。X
+    // 和y分别是小批量样本的特征和标签
+    for X, y in data_iter(batch_size, features, labels):
+        with autograd.record():
+            l = loss(net(X, w, b), y)  // l是有关小批量X和y的损失
+        l.backward()  //小批量的损失对模型参数求梯度
+        sgd([w, b], lr, batch_size)  //使用小批量随机梯度下降迭代模型参数
+    train_l = loss(net(features, w, b), labels)
+    print('epoch %d, loss %f' % (epoch + 1, train_l.mean().asnumpy()))
+```
+训练得到的参数和真实参数十分接近。
+## 线性回归的简洁实现
+使用gulon可以简洁的实现模型。
