@@ -18,6 +18,6 @@
 
 神经网络图：
 
-![image-20200629002415745](https://github.com/FZU-AI/AI_note/blob/master/woo/deep_learning/photo/3.1.png)
+![image-3.1](https://github.com/FZU-AI/AI_note/blob/master/woo/deep_learning/photo/3.1.png)
 
 此神经网络图的层数为1，输入层的输入个数有两个，输入个数也叫特指数或者特征向量维度
