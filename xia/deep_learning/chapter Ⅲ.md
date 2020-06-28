@@ -125,4 +125,66 @@ for epoch in range(num_epochs):  //训练模型一共需要num_epochs个迭代�
 ```
 训练得到的参数和真实参数十分接近。
 ## 线性回归的简洁实现
-使用gulon可以简洁的实现模型。
+使用gluon可以简洁的实现模型。
+### 3.1生成数据集
+```python
+#同上一节
+from mxnet import autograd, nd
+num_inputs = 2
+num_examples = 1000
+true_w = [2, -3.4]
+true_b = 4.2
+features = nd.random.normal(scale=1, shape=(num_examples, num_inputs))
+labels = true_w[0] * features[:, 0] + true_w[1] * features[:, 1] + true_b
+labels += nd.random.normal(scale=0.01, shape=labels.shape)
+```
+### 3.2读取数据集
+```python
+from mxnet.gluon import data as gdata
+batch_size = 10//小批量数为10
+dataset = gdata.ArrayDataset(features, labels)//将训练数据的特征和标签组合
+data_iter = gdata.DataLoader(dataset, batch_size, shuffle=True)//随机读取小批量
+```
+### 3.3定义模型
+gluon预定义了大量的层，其中的nn模块（neural network），定义了大量神经网络的层。在gluon中Sequential实例可以看做一个串联各个层的容器。
+```python
+from mxnet.gluon import nn
+net = nn.Sequential()
+```
+在gluon中，全连接层是一个Dense实例。定义该层输出个数为1.
+```python
+net.add(nn.Dense(1))
+```
+在gluon中无需指定每一层的输入的形状，后面执行net（X）时，会自动推断每一层的输出。
+### 3.4初始化模型参数
+在执行net之前，使用init模块来初始化。
+```python
+from mxnet import init
+
+net.initialize(init.Normal(sigma=0.01))//均值为0，标准差为0.01
+```
+### 3.5定义损失函数
+gluon的loss模块定义了各种损失函数
+```python
+from mxnet.gluon import loss as gloss
+loss = gloss.L2Loss()  //平方损失又称L2范数损失
+```
+### 3.6定义优化算法
+导入gluon后，直接创建一个Trainer实例，并指定学习率为0.03的sgd为优化算法
+```python
+from mxnet import gluon
+trainer = gluon.Trainer(net.collect_params(), 'sgd', {'learning_rate': 0.03})
+```
+### 3.7训练模型
+使用gluon时，通过调用Trainer实例的step函数来迭代模型参数。
+```python
+num_epochs = 3
+for epoch in range(1, num_epochs + 1):
+    for X, y in data_iter:
+        with autograd.record():
+            l = loss(net(X), y)
+        l.backward()
+        trainer.step(batch_size)
+    l = loss(net(features), labels)
+    print('epoch %d, loss: %f' % (epoch, l.mean().asnumpy()))
+```
