@@ -34,6 +34,8 @@
     * [《第三章》](xz/deep_learning/《第三章》.md)
     * [《第四章》](xz/deep_learning/《第四章》.md)
     * [《第五章》](xz/deep_learning/《第五章》.md)
+    * [《第六章》](xz/deep_learning/《第六章》.md)
+    * [《第七章》](xz/deep_learning/《第七章》.md)
 * [dhz](dhz/README.md)
   * [code](dhz/code/README.md)
     * [ReadMe](dhz/code/code.md)
