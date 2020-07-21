@@ -44,6 +44,8 @@
     * [《第二章》](xz/《深度学习与神经网络》/《第二章》.md)
     * [台湾陈蕴侬视频2020](xz/《深度学习与神经网络》/台湾陈蕴侬视频2020.md)
   * [Leetcode](xz/Leetcode/README.md)
+    * [leetcode第一天（乱刷）](xz/Leetcode/leetcode第一天（乱刷）.md)
+    * [leetcode第二天（栈）](xz/Leetcode/leetcode第二天（栈）.md)
     * [leetcode第三天（栈）](xz/Leetcode/leetcode第三天（栈）.md)
 * [dhz](dhz/README.md)
   * [code](dhz/code/README.md)
