@@ -4,7 +4,7 @@
 
 虽然卷积层得名于卷积运算，但是我们通常在卷积层中使用更加直观的互相关运算。在二维互相关运算中，卷积窗口从输入数组的最左上方开始，按从左往右、从上向下的顺序，依次在输入组上滑动
 
-![image-20200712192431594](C:\Users\woo\AppData\Roaming\Typora\typora-user-images\5.1.png)
+![image-20200712192431594](https://github.com/FZU-AI/AI_note/blob/master/woo/deep_learning/photo/5.1.png)
 $$
 0 * 0+1 * 1+3 * 2+4 * 3=19\\
 
@@ -273,7 +273,7 @@ d2l.train_ch5(net,train_iter, test_iter,batch_size,trainer,ctx,num_epochs)
 
 NiN不同于之前的LeNet、AlexNet、VGG，而NiN由多个小网络构成一个深层网络。
 
-![image-20200717223752724](C:\Users\woo\AppData\Roaming\Typora\typora-user-images\5.7.png)
+![image-20200717223752724](https://github.com/FZU-AI/AI_note/blob/master/woo/deep_learning/photo/5.7.png)
 
 
 
