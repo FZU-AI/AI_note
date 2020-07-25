@@ -1,3 +1,4 @@
+```python
 import this
 """
 The Zen of Python, by Tim Peters
@@ -95,3 +96,4 @@ for i in squares:
 m = {'one':1, 'two':2,'three':3}
 for k,v in m.items():
     print(k,v)
+```

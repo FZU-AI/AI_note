@@ -51,7 +51,7 @@
     * [leetcode第五天（贪心）](xz/Leetcode/leetcode第五天（贪心）.md)
     * [leetcode第六天（贪心）](xz/Leetcode/leetcode第六天（贪心）.md)
   * [Other](xz/Other/README.md)
-    * [pythonic语法学习](xz/Other/pythonic.py)
+    * [pythonic语法](xz/Other/pythonic.md)
     * [Ubuntu备忘](xz/Other/Ubuntu命令.md)
 * [dhz](dhz/README.md)
   * [code](dhz/code/README.md)
