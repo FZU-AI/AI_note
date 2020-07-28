@@ -63,7 +63,7 @@ set_figsize()
 plt.scatter(features[:, 1].asnumpy(), labels.asnumpy(), 1);  # 加分号只显示图
 ```
 
-![image-20200728165046980](http://qd2yf2je3.bkt.clouddn.com/20200728165051.png)
+
 
 #### 3.2.2  读取数据
 
