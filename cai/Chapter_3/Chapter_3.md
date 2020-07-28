@@ -50,7 +50,7 @@
 
 #### 三、线性回归与神经网络的联系
 
-![image-20200728161129274](http://qd2yf2je3.bkt.clouddn.com/20200728161134.png)
+![image-20200728161129274](http://qd2yf2je3.bkt.clouddn.com/20200728171926.png)
 
 
 
