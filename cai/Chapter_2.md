@@ -459,4 +459,3 @@ ones_like(data=None, out=None, name=None, **kwargs)
         The output of this function.
 ```
 
-61+11+11
