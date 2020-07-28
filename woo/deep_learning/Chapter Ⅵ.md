@@ -26,7 +26,7 @@ Ht=φ(Xt * Wxh + Ht-1 * Whh + bh)
 
 由上式中相邻时间步的隐藏变量Ht和Ht-1可知，这里的隐藏变量能够捕捉至当前时间步序列的历史信息，就像神经网络的记忆一样。所以上式的计算是循环的，使用循环计算的网络即循环神经网络。
 
-![image-20200723142406148](C:\Users\woo\AppData\Roaming\Typora\typora-user-images\6.1.png)
+![image-20200723142406148](https://github.com/FZU-AI/AI_note/blob/master/woo/deep_learning/photo/6.1.png)
 
 
 
