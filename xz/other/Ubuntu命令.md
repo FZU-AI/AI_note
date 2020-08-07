@@ -23,3 +23,4 @@
     1.  rm -r filename # 递归删除子文件内容
     2.  rmdir dirname # 删除空目录
     3.  mkdir dirname # 创建文件
+13. jupyter nbconvert --to markdown filename # 将ipynb转换为markdown等格式
