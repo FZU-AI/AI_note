@@ -38,7 +38,7 @@ void quick_sort(int q[], int l, int r)
 1 2 3 4 5  
 ### 题解
 ```cpp
-//时间复杂度O(nlogn)
+//时间复杂度O(nlogn),普通快排
 #include <iostream>
 
 using namespace std;
@@ -97,7 +97,7 @@ int main()
 输出样例：  
 3  
 ```cpp
-//时间复杂度O(n)
+//时间复杂度O(n)，快排修改
 #include<iostream>
 
 using namespace std;
@@ -118,7 +118,7 @@ int quick_sort(int l,int r ,int k)
         if(i < j) swap(q[i],q[j]);
     }
     int el = j - l + 1;
-    if(k <= el) return quick_sort(l, j, k);
+    if(k <= el) return quick_sort(l, j, k); //判断第K小数，是否在左半区间内，在的话递归左区间；
     else return quick_sort(j + 1, r, k - el);
 }
 
