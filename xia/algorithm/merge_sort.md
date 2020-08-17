@@ -105,3 +105,49 @@ int main()
 输出样例：  
 5  
 ## 题解
+```cpp
+/*
+归并排序，排序过程中，给出结果  
+数字分布有三种情况，1.都在左区间 2.都在右区间 3.一左一右
+*/
+#include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n;
+int q[N],tmp[N];
+
+long long merge_sort(int l,int r)
+{
+    if (l >= r) return 0;
+    int mid = l + r >> 1;
+    long long res = merge_sort(l, mid) + merge_sort(mid + 1,r);
+    //位于左区间和右区间，直接递归
+    int k = 0,i = l ,j = mid + 1;
+    while(i <= mid && j <= r)
+    {
+        if(q[i] <= q[j]) tmp[k ++] = q[i ++];
+        else//位于左右两侧,且左侧数字大与右侧，该数字及至左区间末尾，均与右区间同一数字构成逆序数
+        {
+            tmp[k ++] = q[j ++];
+            res += mid - i + 1;//左侧区间剩余数字
+        }
+    }
+    while (i <= mid) tmp[k ++] = q[i ++];
+    while (j <= r) tmp[k ++] = q[j ++];
+    
+    for(int i =l,j = 0;i <= r;i ++,j ++) q[i] = tmp[j];
+    return res;
+}
+
+int main()
+{
+    scanf("%d",&n);
+    for(int i = 0;i < n;i ++) scanf("%d",&q[i]);
+    
+    cout << merge_sort(0, n - 1) << endl;
+    return 0;
+}
+```
