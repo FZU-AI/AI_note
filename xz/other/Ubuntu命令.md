@@ -20,7 +20,10 @@
     1.  只需要在运行任何命令前加上proxychains即可
     2.  proxychains gnome-terminal # 用全局代理方式打开终端,方便下载
 12. rm -rf dirname # 强制删除某个文件夹及其内容,慎用
-    1.  rm -r filename # 递归删除子文件内容
+    1.  rm -r filename # 递归删除子文件内容,-R可以删除文件夹
     2.  rmdir dirname # 删除空目录
     3.  mkdir dirname # 创建文件
 13. jupyter nbconvert --to markdown filename # 将ipynb转换为markdown等格式
+14. locate 文件名 # 通过数据库定位文件的位置,最快最好
+    - whereis 文件名 # 模糊查找
+    - sudo find / -name 文件名 # 精确全局查找
